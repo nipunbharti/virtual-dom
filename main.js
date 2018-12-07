@@ -1,5 +1,6 @@
 import createElement from './vdom/createElement';
 import render from './vdom/render';
+import mount from './vdom/mount';
 
 const vApp = createElement('div', {
 	attrs: {
@@ -8,12 +9,13 @@ const vApp = createElement('div', {
 	children: [
 		createElement('img', {
 			attrs: {
-				src: 'https://giphy.com/stickers/animatedtext-loser-transparent-bHELdJXl1LDG0'
+				src: 'https://media.giphy.com/media/bHELdJXl1LDG0/giphy.gif'
 			}
 		}),
 	]
 });
 
 const $app = render(vApp);
+mount($app, document.getElementById('app'));
 
 console.log($app);
