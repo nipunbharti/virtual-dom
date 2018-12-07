@@ -1,11 +1,10 @@
-console.log('Hello');
+import createElement from './vdom/createElement';
 
-const vApp = {
-	tagName: 'div',
+const vApp = createElement('div', {
 	attrs: {
 		id: 'app'
 	},
-	children: [
-		'Hello world!'
-	],
-};
+	children: []
+});
+
+console.log(vApp);
